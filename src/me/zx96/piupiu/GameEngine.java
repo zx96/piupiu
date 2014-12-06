@@ -90,6 +90,8 @@ public class GameEngine {
         
         //Set the explosion sound effect to reset after playing
         sfxExplode.setOnEndOfMedia(() -> sfxExplode.stop());
+        //And keep it from being so freaking loud
+        sfxExplode.setVolume(0.3);
         
         //Play the BGM and start up the Timelines
         bgm.setCycleCount(MediaPlayer.INDEFINITE);

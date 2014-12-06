@@ -114,23 +114,27 @@ public class Player extends Mob {
      * PostCondition: The Player has shifted position.
      */
     protected void doMovement() {
-        if (movingLeft ^ movingRight) {
+        if (movingLeft ^ movingRight) { //Prevents a potential jiggle effect
             if (movingLeft) {
+                //Prevent player from moving past left edge of game area
                 if (getX() >= deltaX) setX(getX() - deltaX);
                 else setX(0);
             }
             if (movingRight) {
+                //Prevent player from moving past right edge of game area
                 if (getX() < (Dimensions.SCREEN_WIDTH - width - deltaX))
                     setX(getX() + deltaX);
                 else setX(Dimensions.SCREEN_WIDTH - width - deltaX);
             }
         }
-        if (movingUp ^ movingDown) {
+        if (movingUp ^ movingDown) { //Prevents a potential jiggle effect
             if (movingUp) {
-                if (getY() >= deltaY) setY(getY() - deltaY);
-                else setY(0);
+                //Prevent player from passing into the HUD area or above
+                if (getY() >= (deltaY + height)) setY(getY() - deltaY);
+                else setY(height);
             }
             if (movingDown) {
+                //Prevent player from leaving the game area at the bottom
                 if (getY() < (Dimensions.SCREEN_HEIGHT - height - deltaY))
                     setY(getY() + deltaY);
                 else setY(Dimensions.SCREEN_HEIGHT - height - deltaY);
