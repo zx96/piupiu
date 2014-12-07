@@ -55,6 +55,6 @@ them to play my game far longer than it deserves to be played.
 The font used is PressStart2P by codeman38 and is licensed under the SIL Open 
 Font License, v1.1, included as OFL.txt.
 
-The sprites are Copyright © 2014 William Barger.
+The sprites are Copyright © 2014 William Barger, licensed under CC-BY-SA.
 
 All code is licensed under the MIT License, included as LICENSE.txt.
