@@ -1,6 +1,6 @@
 # Piu Piu #
 
-### Information###
+### Information ###
 This is a very basic game written for my final project in my computer science 1 
 class.  It's not the best example of code by any means, but it's at least a fun 
 game.
